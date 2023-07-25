@@ -86,20 +86,20 @@ def conversion_semgrep_to_gitlab(report_semgrep, data):
 def get_new_scan_info(data):
     new_scan_info = {
         "analyzer": {
-        "id": "semgrep",
+        "id": "gemnasium-maven",
         "name": "semgrep",
-        "url": "https://semgrep.dev",
+        "url": "https://gitlab.com/gitlab-org/security-products/analyzers/gemnasium",
         "vendor": {
-            "name": "Semgrep"
+            "name": "GitLab"
         },
         "version": data['version']
         },
         "scanner": {
-        "id": "semgrep",
+        "id": "gemnasium-maven",
         "name": "semgrep",
-        "url": "https://semgrep.dev",
+        "url": "https://gitlab.com/gitlab-org/security-products/analyzers/gemnasium",
         "vendor": {
-            "name": "Semgrep"
+            "name": "GitLab"
         },
         "version": data['version']
         },
