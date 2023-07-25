@@ -12,7 +12,7 @@ def conversion_semgrep_to_gitlab(report_semgrep, data):
                         "name": "Semgrep: " + vuln['check_id'],
                         "description": vuln.get('extra')['message'],
                         "cve": vuln.get('extra').get('metadata')['sca-vuln-database-identifier'],
-                        "severity": to_hungarian_case(vuln.get('extra').get('metadata')['sca-severity']),
+                        "severity": "Critical",
                         "solution": "Upgrade to version 2.8.2 or above", ## TODO: get all solutions 
                         "location": {
                             "file": vuln.get('extra').get('sca_info').get('dependency_match')['lockfile'],
