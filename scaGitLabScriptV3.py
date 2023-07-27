@@ -13,7 +13,7 @@ def conversion_semgrep_to_gitlab(report_semgrep, data):
                         "description": vuln.get('extra')['message'],
                         "cve": vuln.get('extra').get('metadata')['sca-vuln-database-identifier'],
                         "severity": get_severity(vuln),
-                        "solution": get_solution(vuln), 
+                        "solution": "Upgrade dependencies to fixed versions: "+get_solution(vuln), 
                         "location": {
                             "file": vuln.get('extra').get('sca_info').get('dependency_match')['lockfile'],
                             "dependency": {
