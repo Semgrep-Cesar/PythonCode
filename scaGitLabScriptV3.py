@@ -84,7 +84,7 @@ def get_solution(vuln):
     for sol in vuln.get('extra').get('metadata')['sca-fix-versions']:
         solution += str(sol)
         solution_string = str(sol)[1:-1].replace("'", "")
-    return solution
+    return solution_string
 
 def get_new_scan_info(data):
     current_datetime = datetime.now()
