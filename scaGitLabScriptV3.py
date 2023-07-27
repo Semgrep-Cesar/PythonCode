@@ -28,7 +28,7 @@ def conversion_semgrep_to_gitlab(report_semgrep, data):
                                 "type": "cve",
                                 "name": vuln.get('extra').get('metadata')['sca-vuln-database-identifier'],
                                 "value": vuln.get('extra').get('metadata')['sca-vuln-database-identifier'],
-                                "url": vuln.get('extra').get('metadata')['references'][1]
+                                "url": vuln.get('extra').get('metadata')['references'][0]
                             }
                         ],
                         "links": [
