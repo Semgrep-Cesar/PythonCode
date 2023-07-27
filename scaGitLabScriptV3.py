@@ -28,7 +28,7 @@ def conversion_semgrep_to_gitlab(report_semgrep, data):
                                 "type": "cve",
                                 "name": vuln.get('extra').get('metadata')['sca-vuln-database-identifier'],
                                 "value": vuln.get('extra').get('metadata')['sca-vuln-database-identifier'],
-                                "url": vuln.get('extra').get('metadata')['references'][0]
+                                "url": vuln.get('extra').get('metadata')['references'][1]
                             }
                         ],
                         "links": [
@@ -83,6 +83,7 @@ def get_solution(vuln):
     solution = ""
     for sol in vuln.get('extra').get('metadata')['sca-fix-versions']:
         solution += str(sol)
+        solution_string = str(sol)[1:-1].replace("'", "")
     return solution
 
 def get_new_scan_info(data):
